@@ -50,7 +50,7 @@ void setup() {
   lcd.init();
   lcd.backlight();
   lcd.setCursor(0, 0);
-  lcd.print("Menghubungkan WiFi");
+  lcd.print("Menghubungkan");
 
   WiFi.begin(ssid, pass);
   while (WiFi.status() != WL_CONNECTED) {
