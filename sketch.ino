@@ -14,7 +14,7 @@ char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 
 BlynkTimer timer;
-LiquidCrystal_I2C lcd(0x27, 16, 2);  // Alamat I2C LCD
+LiquidCrystal_I2C lcd(0x27, 16, 2); 
 
 float suhuSimulasi = 23;
 int suhuTarget = 23;
@@ -22,8 +22,8 @@ int suhuTarget = 23;
 int jamSimulasi = 16;     // Awal waktu simulasi
 int menitSimulasi = 55;
 
-int lastResetHourSuhu = -1;   // Flag reset suhu
-int lastResetHourLampu = -1;  // Flag reset lampu
+int lastResetHourSuhu = -1; 
+int lastResetHourLampu = -1; 
 
 bool lampuManual = false;
 bool overrideLampu = false;
@@ -37,7 +37,7 @@ BLYNK_WRITE(V0) {
 }
 
 BLYNK_WRITE(V5) {
-  lampuManual = param.asInt();  // 0 atau 1 dari tombol Blynk
+  lampuManual = param.asInt();
   overrideLampu = true;
   Serial.println("Lampu manual: " + String(lampuManual ? "ON" : "OFF"));
 }
