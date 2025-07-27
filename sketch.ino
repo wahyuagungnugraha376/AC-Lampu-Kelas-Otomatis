@@ -109,9 +109,8 @@ void loopLogic() {
   digitalWrite(LED_LAMP, lampuOn);
   Blynk.virtualWrite(V2, lampuOn);
 
-  // Kirim suhu dan kelembapan dummy ke Blynk
+  // Kirim suhu 
   Blynk.virtualWrite(V3, suhuSimulasi);
-  Blynk.virtualWrite(V4, 70);
 
   // Tampilkan ke LCD
   lcd.clear();
